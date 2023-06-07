@@ -1,0 +1,17 @@
+The src/main/scala/io/myapp directory contains the Scala source files organized by packages.
+
+The api package contains the API layer related classes. APIClient.scala handles the HTTP requests to fetch latitude and longitude, and WeatherAPI.scala interacts with the weather API to retrieve weather reports.
+
+The csv package contains the input/output layer related classes. CSVReader.scala reads cities from the CSV file, and CSVWriter.scala writes the weather reports back to the CSV file.
+
+The model package contains the data model classes. CityWeather.scala represents the city's weather information.
+
+The service package contains the business logic layer classes. CityService.scala coordinates the operations related to reading cities and writing weather reports. LocationService.scala handles fetching latitude and longitude, and WeatherService.scala retrieves the weather information.
+
+The MainApp.scala file is the entry point of the application, where you initialize the necessary components and orchestrate the execution flow.
+
+The src/main/resources directory contains the application configuration file, application.conf, which may include API credentials or other configuration parameters.
+
+The build.sbt file is the build configuration file for sbt, where you define dependencies, plugins, and other project settings.
+
+The project/build.properties file specifies the sbt version used for the project.
