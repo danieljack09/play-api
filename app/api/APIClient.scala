@@ -3,9 +3,9 @@ package api
 import play.api.libs.json.{JsObject, JsValue}
 import play.libs.Json
 
-import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.DurationInt
+import scala.concurrent.{Await, Future}
 import scala.language.postfixOps
 
 
@@ -50,13 +50,6 @@ object APIClient {
     val population = cityRes.map{obj =>
       (obj \ "population").as[Int]
     }
-
-
-
-
-
-
-
 
 
     def defineUrl(lat: String, lon: String): String = {

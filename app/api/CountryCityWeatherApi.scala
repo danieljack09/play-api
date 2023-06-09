@@ -19,7 +19,6 @@ object CountryCityWeatherApi {
       val windSpeed = ((resultFromJsonCity \ "windSpeed") \ "value").as[Double]
 
 
-
       val resultFromJsonCountry = Json.parse(CountryDetailsApi.getAllCountryData(country))
       val capital = (resultFromJsonCountry \ "capital").as[Seq[String]].head
       val countryRegion = (resultFromJsonCountry \ "countryRegion").as[Seq[String]].head
@@ -44,6 +43,7 @@ object CountryCityWeatherApi {
           "periodOfDay" -> isDay
         )
       )
-      Json.stringify(responseResult)
+    responseResult
+//      Json.stringify(responseResult)
     }
 }
